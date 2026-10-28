@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smile Dental Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-200">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2 text-2xl font-bold text-teal-600 dark:text-teal-400">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+      </svg>
+      Smile Dental
+    </div>
+
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex items-center gap-6 font-medium">
+      <button onclick="switchView('home')" class="hover:text-teal-500 transition">Home</button>
+      <button onclick="handleAdminNav()" class="hover:text-teal-500 transition">Admin Panel</button>
+      <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Toggle theme">
+        <span id="theme-icon-desktop">🌙</span>
+      </button>
+      <a href="#booking-section" onclick="switchView('home')" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full font-semibold transition">
+        Book Visit
+      </a>
+    </div>
+
+    <!-- Mobile Theme Toggle -->
+    <div class="md:hidden flex items-center">
+      <button onclick="toggleTheme()" class="p-2 text-xl" aria-label="Toggle theme">
+        <span id="theme-icon-mobile">🌙</span>
+      </button>
+    </div>
+  </
